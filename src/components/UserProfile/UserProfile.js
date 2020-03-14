@@ -6,7 +6,8 @@ import "./UserProfile.css";
 const UserProfile = (props) => {
     // console.log(props);
     const { name, email, phone, picture, location } = props.userProfile;
-    var a = [1, 2, 3, 4, 5];
+
+    var arr = [300, 500, 600, 7000, 3000, 10000, 400, 100000, 15000, 35000, 45000, 5000, 130000, 123000, 100000000];
     function shuffle(array) {
         var tmp, current, top = array.length;
         if (top) while (--top) {
@@ -17,6 +18,7 @@ const UserProfile = (props) => {
         }
         return array;
     }
+    const income = parseInt(shuffle(arr));
 
     return (
         <div className="card card-body bg-light mb-3">
@@ -28,11 +30,11 @@ const UserProfile = (props) => {
                     <h3>Name: {name.title} {name.first} {name.last}</h3>
                     <p>Email: {email}</p>
                     <p>Phone: {phone}</p>
-                    <p>Yearly Income: ${shuffle(a)}</p>
+                    <p className="income">Yearly Income: ${income}</p>
                     <p>Address: {location.country}</p>
                     <button
                         className="btn btn-info"
-                        onClick={() => props.handleUserInfo(props.userProfile)}
+                        onClick={(e) => props.handleUserInfo(e, props.userProfile)}
                     ><FontAwesomeIcon icon={faUserPlus} />Add User</button>
                 </div>
             </div>

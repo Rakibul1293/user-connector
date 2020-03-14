@@ -4,12 +4,6 @@ import "./User.css";
 import UserProfile from '../UserProfile/UserProfile';
 import UserInfo from '../UserInfo/UserInfo';
 
-// https://randomuser.me/api 
-// https://randomuser.me/api/portraits/men/56.jpg
-// https://bondhu-bandhob.netlify.com/
-// https://xenodochial-almeida-93da02.netlify.com/
-// https://elastic-bardeen-584ecb.netlify.com/
-
 const User = () => {
     const [userProfile, setUserProfile] = useState([]);
     const [userInfo, setUserInfo] = useState([]);
@@ -20,10 +14,11 @@ const User = () => {
                 // console.log(getData.data.results);
                 setUserProfile(getData.data.results);
             })
-    })
+    }, [])
 
-    const handleUserInfo = (userInfos) => {
-        console.log("handleAddProduct", userProfile, userInfos.id.name);
+    const handleUserInfo = (e, userInfos) => {
+        e.preventDefault();
+        console.log("handleAddProduct", userInfos);
 
         const newUserInfo = [...userInfo, userInfos];
         setUserInfo(newUserInfo);
