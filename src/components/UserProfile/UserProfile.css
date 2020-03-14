@@ -1,0 +1,12 @@
+img {
+    width: 100%;
+}
+.btn-info{
+    background-color: #0062cc;
+}
+.btn-info:hover {
+    background-color: #0062cc;
+}
+.btn-info:focus {
+    background-color: #0062cc;
+}
