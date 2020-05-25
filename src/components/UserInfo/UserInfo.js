@@ -15,7 +15,7 @@ const UserInfo = (props) => {
                         <h4 className="text-center">Request Summary</h4>
                         <ul className="list-group">
                             <li className="list-group-item">Total Request: {userInfo.length}</li>
-                            <li className="list-group-item">User's Total Yearly Income: </li>
+                            // <li className="list-group-item">User's Total Yearly Income: </li>
                         </ul>
                         <br />
                     </div>
